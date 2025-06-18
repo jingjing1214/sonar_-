@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import os
 from chatbot import ask_perplexity
 
 st.set_page_config(page_title="冰箱食材推薦系統", layout="wide")
@@ -17,6 +18,7 @@ def load_user_fridge():
         return "雞肉, 馬鈴薯"
 
 def save_user_fridge(content):
+    os.makedirs("user_data", exist_ok=True)
     with open(user_data_file, "w", encoding="utf-8") as f:
         json.dump(content, f)
 
