@@ -6,7 +6,7 @@ from chatbot import ask_perplexity
 st.set_page_config(page_title="冰箱食材推薦系統", layout="wide")
 st.title("🥬 冰箱食材 X 食譜推薦")
 
-selected_user = st.sidebar.selectbox("👤 選擇使用者", ["Alice", "Bob"])
+selected_user = st.sidebar.selectbox("👤 選擇使用者", ["Charlotte", "Nono"])
 username = selected_user.lower()
 user_data_file = f"user_data/{username}_fridge.json"
 
